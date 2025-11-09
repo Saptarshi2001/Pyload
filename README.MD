@@ -143,7 +143,7 @@ echo "timeout=30" >> .env
 PyLoad provides a comprehensive CLI for load testing:
 
 ```bash
-pyload [OPTIONS] COMMAND
+ccload [OPTIONS] COMMAND
 ```
 
 ### Basic Load Testing
@@ -151,34 +151,34 @@ pyload [OPTIONS] COMMAND
 Test a GET endpoint with 100 requests and 10 concurrent connections:
 
 ```bash
-pyload -u https://httpbin.org/get -n 100 -c 10 -GET
+ccload -u https://httpbin.org/get -n 100 -c 10 -GET
 ```
 
 ### HTTP Methods
 
 #### GET Request
 ```bash
-pyload -u https://jsonplaceholder.typicode.com/posts -n 50 -c 5 -GET
+ccload -u https://jsonplaceholder.typicode.com/posts -n 50 -c 5 -GET
 ```
 
 #### POST Request with JSON Data
 ```bash
-pyload -u https://jsonplaceholder.typicode.com/posts -n 20 -c 2 -POST -d '{"title": "Test Post", "body": "This is a test", "userId": 1}'
+ccload -u https://jsonplaceholder.typicode.com/posts -n 20 -c 2 -POST -d '{"title": "Test Post", "body": "This is a test", "userId": 1}'
 ```
 
 #### PUT Request
 ```bash
-pyload -u https://jsonplaceholder.typicode.com/posts/1 -n 10 -c 1 -PUT -d '{"title": "Updated Post", "body": "Updated content", "userId": 1}'
+ccload -u https://jsonplaceholder.typicode.com/posts/1 -n 10 -c 1 -PUT -d '{"title": "Updated Post", "body": "Updated content", "userId": 1}'
 ```
 
 #### DELETE Request
 ```bash
-pyload -u https://jsonplaceholder.typicode.com/posts/1 -n 5 -c 1 -DELETE
+ccload -u https://jsonplaceholder.typicode.com/posts/1 -n 5 -c 1 -DELETE
 ```
 
 #### PATCH Request
 ```bash
-pyload -u https://jsonplaceholder.typicode.com/posts/1 -n 5 -c 1 -PATCH -d '{"title": "Patched Title"}'
+ccload -u https://jsonplaceholder.typicode.com/posts/1 -n 5 -c 1 -PATCH -d '{"title": "Patched Title"}'
 ```
 
 ### History Mode
@@ -187,16 +187,16 @@ View past test results:
 
 ```bash
 # View all test history
-pyload -history
+ccload -history
 
 # View weekly summary
-pyload -history -weekly
+ccload -history -weekly
 
 # View monthly summary
-pyload -history -monthly
+ccload -history -monthly
 
 # View yearly summary
-pyload -history -yearly
+ccload -history -yearly
 ```
 
 ### Command Line Options
@@ -221,30 +221,30 @@ pyload -history -yearly
 
 ```bash
 # Test posts endpoint
-pyload -u https://jsonplaceholder.typicode.com/posts -n 1000 -c 50 -GET
+ccload -u https://jsonplaceholder.typicode.com/posts -n 1000 -c 50 -GET
 
 # Test user creation endpoint
-pyload -u https://reqres.in/api/users -n 100 -c 10 -POST -d '{"name": "John Doe", "job": "developer"}'
+ccload -u https://reqres.in/api/users -n 100 -c 10 -POST -d '{"name": "John Doe", "job": "developer"}'
 
 # Test data endpoint
-pyload -u https://httpbin.org/json -n 500 -c 25 -GET
+ccload -u https://httpbin.org/json -n 500 -c 25 -GET
 ```
 
 #### Performance Testing
 
 ```bash
 # High concurrency test
-pyload -u https://httpbin.org/delay/1 -n 1000 -c 100 -GET
+ccload -u https://httpbin.org/delay/1 -n 1000 -c 100 -GET
 
 # Stress test with timeout
-pyload -u https://httpbin.org/delay/2 -n 100 -c 10 -GET
+ccload -u https://httpbin.org/delay/2 -n 100 -c 10 -GET
 ```
 
 #### Monitoring Integration
 
 ```bash
 # Test with Betterstack monitoring
-pyload -u https://httpbin.org/status/500 -n 100 -c 5 -GET
+ccload -u https://httpbin.org/status/500 -n 100 -c 5 -GET
 # Check Betterstack dashboard for any failures
 ```
 
