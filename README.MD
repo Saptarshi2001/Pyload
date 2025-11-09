@@ -468,7 +468,7 @@ For issues, questions, or contributions:
 
 ## Changelog
 
-### Version 0.1.0
+### Version 0.1.1
 - Initial release
 - Basic async load testing functionality
 - SQLite database storage
