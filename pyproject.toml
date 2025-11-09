@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pyld"
+name = "async-load-tester"
 version = "0.1.0"
 description = "Asynchronous HTTP Load Testing Tool with Database Storage and Betterstack Integration"
 readme = "README.MD"

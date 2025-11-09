@@ -18,7 +18,7 @@ def read_requirements():
         ]
 
 setup(
-    name='pyload',
+    name='py-loader',
     version='0.1.0',
     description='Asynchronous HTTP Load Testing Tool with Database Storage and Betterstack Integration',
     long_description=long_description,

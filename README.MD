@@ -38,7 +38,7 @@ pip install aiohttp requests python-dotenv
 ### Install via pip
 
 ```bash
-pip install pyload
+pip install async-load-tester
 ```
 
 ### Quick Setup
@@ -382,21 +382,7 @@ tests/
 
 ## Development
 
-### Project Structure
 
-```
-pyload/
-├── pyload.py           # Main module
-├── setup.py            # Package configuration
-├── config.env          # Environment configuration
-├── README.MD           # This file
-├── tests/              # Test suite
-│   ├── __init__.py
-│   ├── testload.py
-│   ├── testasync.py
-│   └── testdb.py
-└── load.db            # SQLite database (created automatically)
-```
 
 ### Adding New Features
 
