@@ -7,7 +7,7 @@ A high-performance, asynchronous load testing tool for HTTP endpoints built with
 - 🚀 **Asynchronous Testing**: High-performance async HTTP requests using aiohttp
 - 📊 **Comprehensive Statistics**: Response time metrics (min, max, average) for total, first-byte, and last-byte times
 - 🗄️ **Database Storage**: SQLite-based storage of all test results with history tracking
-- 📈 **Betterstack Integration**: Automatic failure logging to Betterstack (which forwards to Loki/Grafana) for monitoring
+- 📈 **Betterstack Integration**: Automatic failure logging to Betterstack for monitoring
 - 🔄 **Concurrent Requests**: Configurable concurrency levels for realistic load testing
 - 🌐 **Multiple HTTP Methods**: Support for GET, POST, PUT, DELETE, and PATCH requests
 - 📋 **Request History**: View past test results with filtering by time periods (weekly, monthly, yearly)
@@ -119,9 +119,8 @@ For production deployments or CI/CD pipelines, you can specify a custom config f
 # Set environment variable
 export PYLOAD_CONFIG=/etc/pyload/production.env
 
-# Or inline with command
-PYLOAD_CONFIG=/path/to/config.env pyload -u https://api.example.com -n 100 -c 10 -GET
-```
+
+
 
 #### Using .env as Fallback
 
