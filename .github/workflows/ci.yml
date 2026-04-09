@@ -19,7 +19,7 @@ jobs:
       - name: install dependencies
         run: pip install -r requirements.txt
       - name: Run tests
-        run: pytest tests/testasync.py tests/testdb.py tests/testload.py
+        run: PYTHONPATH=. pytest tests/
         env:  
             DATABASE_URL: load.db
             timeout: 0 
