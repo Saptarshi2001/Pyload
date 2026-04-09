@@ -26,8 +26,7 @@ logging.basicConfig(level=logging.INFO)
 timeout=os.getenv("timeout")
 LOGTAIL_URL=os.getenv("LOGTAIL_URL")
 LOGTAIL_TOKEN=os.getenv("LOGTAIL_TOKEN")
-USERNAME=os.getenv("USERNAME")
-PASSWORD=os.getenv("PASSWORD")
+
 handler = LogtailHandler(
     source_token=LOGTAIL_TOKEN, 
     host=LOGTAIL_URL,
@@ -169,7 +168,7 @@ class Loadtester:
 
                                     logger.info(msg)
                             
-                            print("Error occured!!! Please look into betterstack for more details")
+                                print("Error occured!!! Please look into betterstack for more details")
                 
                     except aiohttp.ClientError as e:
                         print("aiohttp exception"+ str(e))
