@@ -12,6 +12,7 @@ import json
 import datetime
 from logtail import LogtailHandler
 import logging
+
 import dotenv
 from dotenv import load_dotenv
 config_path = os.getenv("PYLOAD_CONFIG")  # Optional env var pointing to config
@@ -241,7 +242,7 @@ class Loadtester:
 
             
 
-    def history(self,timemode):
+    def history(self,timemode=None):
         try:
             conn=sqlite3.connect(dburl)
             curr=conn.cursor()
