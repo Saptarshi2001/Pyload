@@ -89,4 +89,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/Saptarshi2001/loadtester:latest
+        tags: ghcr.io/saptarshi2001/loadtester:latest
